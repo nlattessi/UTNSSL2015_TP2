@@ -1,0 +1,22 @@
+/* TP #2
+ * Nahuel Lattessi
+ * 201504016
+ */
+
+#include <stdio.h>
+
+int main(void)
+{
+	int c;
+
+	while ((c = getchar()) != EOF) {
+		if (c == '\t')
+			printf("%s", "\\t");
+		else if ( c == '\b')
+			printf("%s", "\\b");
+		else if ( c == '\\')
+			printf("%s", "\\\\");
+		else
+			putchar(c);
+	}
+}
